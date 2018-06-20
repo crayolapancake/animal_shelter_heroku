@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Happy Home Animal Shelter</title>
+      <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+
+    <div id="images">
+      <img src="/images/lottie_snow.png" alt="Lottie the Collie">
+      <img src="/images/two_cats.png"  alt="Two cats">
+      <img src="/images/islay2.png"  alt="Islay the Collie">
+    </div>
+
+  </head>
+  <body>
+      <h1>Happy Home Animal Shelter</h1>
+
+      <nav id="menu">
+        <ul class="menu-item"><a href='/animals'>Shelter Home</a></ul>
+        <ul class="menu-item"><a href='/animals/all'>All Animals & Owners</a></ul>
+        <ul class="menu-item"><a href='/animals/new'>Add New Animal</a></ul>
+        <ul class="menu-item"><a href='/animals/owner/new'>Register and Adopt</a></ul>
+        <ul class="menu-item"><a href='/animals/cats'>All Cats</a></ul>
+        <ul class="menu-item"><a href='/animals/dogs'>All Dogs</a></ul>
+    </nav>
+
+    <section id="content">
+      <%= yield %>
+    </section>
+  </body>
+</html>

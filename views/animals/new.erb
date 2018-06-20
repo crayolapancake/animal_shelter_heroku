@@ -1,0 +1,40 @@
+
+<h2>New Animal for Adoption</h2>
+<form method="POST" action="/animals/all">
+  <div class="form-wrapper" >
+
+    <div class="form-el">
+      <label for="name">Animal Name:</label>
+      <input type="text" name="name" id="name" placeholder="Animal Name"/>
+    </div>
+
+    <div class="form-el">
+      <label for="species">Species:</label>
+      <input type="text" name="species" id="species" placeholder="Species"/>
+    </div>
+
+    <div class="form-el">
+      <label for="age">Age:</label>
+      <input type="text" name="age" id="age" placeholder="Animal Age"/>
+    </div>
+
+    <div class="form-el">
+      <label for="adoptable">Adoptable:</label>
+      <input type="text" name="adoptable" id="adoptable" placeholder="Yes / No"/>
+    </div>
+
+    <label for="owner_id">Owner:</label>
+    <select name="owner_id">
+      <% for an_owner in @owners  %>
+        <option value="<%= an_owner.id %>"><%= an_owner.name %></option>
+      <% end %>
+    </select>
+
+    <!-- for an_owner in @owners(which is owners.all)
+    find owner id and print corresponding name
+    within a dropdown menu -->
+
+        <input class="submit" type="submit" value="Add New Animal"/>
+
+  </div>
+</form>
